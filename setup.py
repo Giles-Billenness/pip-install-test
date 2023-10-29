@@ -9,7 +9,7 @@ setup(name='pip-test',
       author_email='test@email',
       url='TBC',
       packages=['test_module','data_process'],
-    #   install_requires=['bs4','ansible-core','botocore','boto3', 'mr4mp', 'lxml'],
+      install_requires=['pandas','numpy','argparse','os'],
       entry_points={'console_scripts': ['pip-test-print = test_module.hello_world:hello_world_function',
                                         'pip-test-split = data_process.split:split_Data']}
-     )
+     )s
