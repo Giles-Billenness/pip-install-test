@@ -1,5 +1,7 @@
-def hello_world_function():
-    print(1+1)
+import os
+import sys
 
-return print("Hello world")
+def hello_world_function():
+    #echo 
+    print("Hello world")
 
