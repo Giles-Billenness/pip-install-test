@@ -12,4 +12,4 @@ setup(name='pip-test',
       install_requires=['pandas','numpy'],
       entry_points={'console_scripts': ['pip-test-print = test_module.hello_world:hello_world_function',
                                         'pip-test-split = data_process.split:split_Data']}
-     )s
+     )
