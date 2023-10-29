@@ -9,7 +9,7 @@ def split_Data():
     arguments = parser.parse_args()
 
     df = pd.read_csv(arguments.pathToData, sep='\t')
-    n = len(df)/2
+    n = round(df.shape[0]/2)
     list_df = np.array_split(df, n)
     for df in list_df:
         df.to_csv(os.path.dirname(pathToData) + str(df.index[0]) + '.csv', sep='\t', index=False)
