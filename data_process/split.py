@@ -2,8 +2,12 @@ import pandas as pd
 import numpy as np
 import os
 
-def split_Data(pathToData):
-    df = pd.read_csv(pathToData, sep='\t')
+def split_Data():
+    parser = ArgumentParser(description="Process a collection or individual zip file")
+    parser.add_argument("pathToData", help="The path to the data to be processed")
+    arguments = parser.parse_args()
+    
+    df = pd.read_csv(arguments.pathToData, sep='\t')
     n = df.len()/2
     list_df = np.array_split(df, n)
     for df in list_df:
